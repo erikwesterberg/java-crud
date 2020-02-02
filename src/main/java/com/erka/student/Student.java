@@ -1,14 +1,22 @@
 package com.erka.student;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="studenttab")
 
 public class Student {
   
+  @Id
   private Long id;
+  @Column(name="sname")
   private String name;
+  @Column(name="scourse")
   private String course;
+  @Column(name="sfee")
   private double fee;
 
   public Long getId() {
